@@ -6,7 +6,7 @@ import 'package:bitcoin_bip44/bitcoin_bip44.dart';
 
 void main() {
   test('list accounts', () async {
-    var coin = Coin(Chain.seed('00'), bitcoin);
+    var coin = Coin(Chain.seed('00'), bitcoin, 0);
     scanners = [MockScanner()];
 
     expect(await coin.accounts(), hasLength(10));

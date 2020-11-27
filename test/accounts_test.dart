@@ -16,13 +16,13 @@ void main() {
 
   test('list used addresses', () async {
     scanners = [MockScanner()];
-    expect(await account.usedAddresses(), hasLength(10));
+    expect(await account.usedAddresses(0), hasLength(10));
   });
 
   test('return next unused address', () async {
     scanners = [MockScanner()];
 
-    var next = await account.nextUnusedAddress();
+    var next = await account.nextUnusedAddress(0);
 
     expect(next, isNotNull);
 

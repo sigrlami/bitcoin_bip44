@@ -6,7 +6,7 @@ void main() {
   var bip44 = Bip44(toHexString('some seed'));
   var bitcoin = bip44.coins[0];
   var account = Account(bitcoin, 0, changeExternal);
-  account.nextUnusedAddress().then(print);
+  account.nextUnusedAddress(0).then(print);
 
   // Add a scanner of your own:
   scanners = [MyOwnScanner()];
