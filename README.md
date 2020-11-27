@@ -26,6 +26,7 @@ It is trivial to add more iff the coin appears in [SLIP44](https://github.com/sa
 - Bitcoin
 - Testnets
 - Litecoin
+- Idena
 
 ## Installing
 
