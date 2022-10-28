@@ -31,11 +31,11 @@ class Address {
 
   String get path => '${account.path}/$index';
   Chain get chain => account.chain;
-  ECPoint get publicKey => chain.forPath(path).publicKey().q;
+  ECPoint get publicKey => chain.forPath(path)!.publicKey().q!;
 
   // ignore: non_constant_identifier_names
-  String get P2PKH => toP2PKH(chain.forPath(path).publicKey().q);
+  String get P2PKH => toP2PKH(chain.forPath(path)!.publicKey().q!);
 
   // ignore: non_constant_identifier_names
-  String get P2WPKH => toP2WPKH(chain.forPath(path).publicKey().q);
+  String get P2WPKH => toP2WPKH(chain.forPath(path)!.publicKey().q!);
 }

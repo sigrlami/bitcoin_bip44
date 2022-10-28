@@ -6,7 +6,7 @@ import 'package:test/test.dart';
 import 'package:bitcoin_bip44/bitcoin_bip44.dart';
 
 void main() {
-  Account account;
+  late Account account;
 
   setUp(() {
     var bip44 = Bip44(toHexString('some seed'));
@@ -30,13 +30,13 @@ void main() {
   });
 
   group('address genenration with given public key', () {
-    var publicKey = HEX.decode(
-        '0279BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798');
-    ECPoint point;
+    var publicKey =
+        HEX.decode('0279BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798');
+    late ECPoint point;
 
     setUp(() {
       var curve = ECCurve_secp256k1().curve;
-      point = curve.decodePoint(publicKey);
+      point = curve.decodePoint(publicKey)!;
     });
 
     test('generate P2PKH', () {
@@ -55,10 +55,7 @@ void main() {
 }
 
 String toHexString(String original) {
-  return original.codeUnits
-      .map((c) => c.toRadixString(16).padLeft(2, '0'))
-      .toList()
-      .join('');
+  return original.codeUnits.map((c) => c.toRadixString(16).padLeft(2, '0')).toList().join('');
 }
 
 class MockScanner implements Scanner {

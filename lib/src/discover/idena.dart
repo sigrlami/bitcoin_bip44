@@ -9,15 +9,17 @@ class Idena implements Scanner {
 
   static const String defaultUrl = 'https://api.idena.io/api/';
   static const Map<String, String> defaultHeaders = {
-    'User-Agent': 'Dart bitcoin_bip44 library'
+    'User-Agent': 'Dart bitcoin_bip44 library',
   };
 
   final String url;
 
   @override
   Future<bool> present(String address) async {
-    var response =
-        await http.get('$url/Address/$address', headers: defaultHeaders);
+    var response = await http.get(
+      Uri.parse('$url/Address/$address'),
+      headers: defaultHeaders,
+    );
     return response.statusCode == 200;
   }
 }

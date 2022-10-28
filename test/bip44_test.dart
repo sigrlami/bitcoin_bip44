@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 import 'package:bitcoin_bip44/bitcoin_bip44.dart';
 
 void main() {
-  Bip44 bip44;
+  late Bip44 bip44;
 
   setUp(() {
     bip44 = Bip44(toHexString('some seed'));
@@ -33,8 +33,5 @@ void main() {
 }
 
 String toHexString(String original) {
-  return original.codeUnits
-      .map((c) => c.toRadixString(16).padLeft(2, '0'))
-      .toList()
-      .join('');
+  return original.codeUnits.map((c) => c.toRadixString(16).padLeft(2, '0')).toList().join('');
 }

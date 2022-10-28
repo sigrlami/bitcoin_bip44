@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 import 'package:bitcoin_bip44/bitcoin_bip44.dart';
 
 void main() {
-  Address address;
+  late Address address;
 
   setUp(() {
     var bip44 = Bip44('00');
