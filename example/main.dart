@@ -1,4 +1,4 @@
-import 'package:bitcoin_bip44/bitcoin_bip44.dart';
+import 'package:bitcoin_bip44_ng/bitcoin_bip44_ng.dart';
 
 // ignore_for_file: avoid_print
 

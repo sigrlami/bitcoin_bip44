@@ -1,6 +1,6 @@
 import 'package:test/test.dart';
 
-import 'package:bitcoin_bip44/bitcoin_bip44.dart';
+import 'package:bitcoin_bip44_ng/bitcoin_bip44_ng.dart';
 
 void main() {
   late Address address;

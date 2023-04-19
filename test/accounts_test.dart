@@ -3,7 +3,7 @@ import 'package:pointycastle/ecc/api.dart';
 import 'package:pointycastle/ecc/curves/secp256k1.dart';
 import 'package:test/test.dart';
 
-import 'package:bitcoin_bip44/bitcoin_bip44.dart';
+import 'package:bitcoin_bip44_ng/bitcoin_bip44_ng.dart';
 
 void main() {
   late Account account;

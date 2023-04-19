@@ -1,6 +1,6 @@
 // ignore_for_file: constant_identifier_names
 import 'dart:async';
-import 'package:bitcoin_bip32/bitcoin_bip32.dart';
+import 'package:bitcoin_bip32_ng/bitcoin_bip32_ng.dart';
 
 import 'accounts.dart';
 import 'bip44.dart';

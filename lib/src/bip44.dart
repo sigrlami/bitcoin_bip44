@@ -1,4 +1,4 @@
-import 'package:bitcoin_bip32/bitcoin_bip32.dart';
+import 'package:bitcoin_bip32_ng/bitcoin_bip32_ng.dart';
 
 import 'coins.dart';
 

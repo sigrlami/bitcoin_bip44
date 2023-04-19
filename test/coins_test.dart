@@ -1,8 +1,8 @@
 import 'package:test/test.dart';
 
-import 'package:bitcoin_bip32/bitcoin_bip32.dart';
+import 'package:bitcoin_bip32_ng/bitcoin_bip32_ng.dart';
 
-import 'package:bitcoin_bip44/bitcoin_bip44.dart';
+import 'package:bitcoin_bip44_ng/bitcoin_bip44_ng.dart';
 
 void main() {
   test('list accounts', () async {

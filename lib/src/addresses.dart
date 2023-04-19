@@ -4,7 +4,7 @@ import 'package:pointycastle/digests/sha256.dart';
 import 'package:pointycastle/digests/ripemd160.dart';
 import 'package:base58check/base58check.dart';
 
-import 'package:bitcoin_bip32/bitcoin_bip32.dart';
+import 'package:bitcoin_bip32_ng/bitcoin_bip32_ng.dart';
 
 import 'accounts.dart';
 
@@ -32,6 +32,7 @@ class Address {
   String get path => '${account.path}/$index';
   Chain get chain => account.chain;
   ECPoint get publicKey => chain.forPath(path)!.publicKey().q!;
+
 
   // ignore: non_constant_identifier_names
   String get P2PKH => toP2PKH(chain.forPath(path)!.publicKey().q!);
